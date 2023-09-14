@@ -33,6 +33,8 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         setupViews()
         
+        button.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        
     }
     
     func setupViews() {
@@ -53,11 +55,14 @@ class ViewController: UIViewController {
             
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
-            button.heightAnchor.constraint(equalToConstant: view.frame.height/25),
+            //button.heightAnchor.constraint(equalToConstant: view.frame.height/25),
             button.widthAnchor.constraint(equalToConstant: view.frame.width)
         ])
     }
-    
-    
 }
 
+private extension ViewController {
+    @objc func tap() {
+        navigationController?.pushViewController(NewViewController(), animated: true)
+    }
+}
