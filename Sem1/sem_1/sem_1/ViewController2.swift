@@ -12,6 +12,7 @@ final class ViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .green
+        title = "View Controller #2"
     }
 }
 
