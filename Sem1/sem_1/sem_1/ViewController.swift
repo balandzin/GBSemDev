@@ -48,15 +48,22 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor
-                                       , constant: 40),
-            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
-            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
-            label.heightAnchor.constraint(equalToConstant: 100),
+                                       , constant: 20),
+//            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 60),
+//            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -60),
+            label.widthAnchor.constraint(equalToConstant: view.frame.width/1.5),
+            label.heightAnchor.constraint(equalToConstant: view.frame.width/4),
+            
+            //label.heightAnchor.constraint(equalToConstant: 100),
             
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 15),
-            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+//            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+//            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            button.widthAnchor.constraint(equalToConstant: view
+                .frame.size.width/1.1),
+            button.heightAnchor.constraint(equalToConstant: view
+                .frame.size.height/25)
         
         
         ])
