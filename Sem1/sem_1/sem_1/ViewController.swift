@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     private var button: UIButton = {
        var button = UIButton()
         button.setTitle("Tap!", for: .normal)
+        button.setTitle("Tap action", for: .highlighted)
         button.backgroundColor = .green
         button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.red, for: .highlighted)
         return button
         
     }()
