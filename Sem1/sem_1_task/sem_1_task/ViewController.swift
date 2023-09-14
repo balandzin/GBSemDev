@@ -28,24 +28,39 @@ class ViewController: UIViewController {
         return button
     }()
     
+    private var button1: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .blue
+        button.setTitle("Изменить цвет экрана", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.green, for: .highlighted)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupViews()
-        
+    
         button.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        button1.addTarget(self, action: #selector(tap1), for: .touchUpInside)
         
     }
+    
+    private var isTab = false
+
     
     func setupViews() {
         view.addSubview(label)
         view.addSubview(button)
+        view.addSubview(button1)
         setupConstreints()
     }
     
     private func setupConstreints() {
         label.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
+        button1.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -56,7 +71,11 @@ class ViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
             //button.heightAnchor.constraint(equalToConstant: view.frame.height/25),
-            button.widthAnchor.constraint(equalToConstant: view.frame.width)
+            button.widthAnchor.constraint(equalToConstant: view.frame.width),
+            
+            button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button1.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
+            button1.widthAnchor.constraint(equalToConstant: view.frame.width)
         ])
     }
 }
@@ -64,5 +83,16 @@ class ViewController: UIViewController {
 private extension ViewController {
     @objc func tap() {
         navigationController?.pushViewController(NewViewController(), animated: true)
+    }
+}
+
+private extension ViewController {
+    @objc func tap1() {
+        isTab.toggle()
+        if isTab {
+            view.backgroundColor = .green
+        } else {
+            view.backgroundColor = .yellow
+        }
     }
 }
