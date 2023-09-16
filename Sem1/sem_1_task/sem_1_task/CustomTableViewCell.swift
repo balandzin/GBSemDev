@@ -63,19 +63,23 @@ class CustomTableViewCell: UITableViewCell {
         circle.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            text1.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            text1.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            text1.widthAnchor.constraint(equalToConstant: view.frame.width/1.5),
-            text1.heightAnchor.constraint(equalToConstant: view.frame.height/8),
+            circle.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            circle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            circle.heightAnchor.constraint(equalToConstant: 50),
+            circle.widthAnchor.constraint(equalTo: circle.heightAnchor),
             
-            text2.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            text2.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20),
-            //button.heightAnchor.constraint(equalToConstant: view.frame.height/25),
-            text2.widthAnchor.constraint(equalToConstant: view.frame.width),
+            text1.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            text1.leadingAnchor.constraint(equalTo: circle.trailingAnchor, constant: 30),
+            text1.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 10),
             
-            text3.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            text3.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
-            text3.widthAnchor.constraint(equalToConstant: view.frame.width)
+            text2.topAnchor.constraint(equalTo: text1.bottomAnchor, constant: 10),
+            text2.leadingAnchor.constraint(equalTo: text1.leadingAnchor),
+            text2.trailingAnchor.constraint(equalTo: text1.trailingAnchor),
+            
+            text3.topAnchor.constraint(equalTo: text2.bottomAnchor, constant: 10),
+            text3.leadingAnchor.constraint(equalTo: text1.leadingAnchor),
+            text3.trailingAnchor.constraint(equalTo: text1.trailingAnchor)
+        ])
     }
     
     
