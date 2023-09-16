@@ -78,7 +78,8 @@ class CustomTableViewCell: UITableViewCell {
             
             text3.topAnchor.constraint(equalTo: text2.bottomAnchor, constant: 10),
             text3.leadingAnchor.constraint(equalTo: text1.leadingAnchor),
-            text3.trailingAnchor.constraint(equalTo: text1.trailingAnchor)
+            text3.trailingAnchor.constraint(equalTo: text1.trailingAnchor),
+            text3.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10)
         ])
     }
     

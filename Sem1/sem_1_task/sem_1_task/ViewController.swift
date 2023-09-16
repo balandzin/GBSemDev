@@ -103,7 +103,7 @@ private extension ViewController {
 }
 private extension ViewController {
     @objc func tap2() {
-        navigationController?.pushViewController(NewViewController(), animated: true)
+        navigationController?.pushViewController(TableTableViewController(), animated: true)
     }
 }
 
