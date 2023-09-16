@@ -37,6 +37,15 @@ class ViewController: UIViewController {
         return button
     }()
     
+    private var button2: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .blue
+        button.setTitle("Перейти на TableViewController", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.green, for: .highlighted)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -44,6 +53,7 @@ class ViewController: UIViewController {
     
         button.addTarget(self, action: #selector(tap), for: .touchUpInside)
         button1.addTarget(self, action: #selector(tap1), for: .touchUpInside)
+        button2.addTarget(self, action: #selector(tap2), for: .touchUpInside)
         
     }
     
@@ -54,6 +64,7 @@ class ViewController: UIViewController {
         view.addSubview(label)
         view.addSubview(button)
         view.addSubview(button1)
+        view.addSubview(button2)
         setupConstreints()
     }
     
@@ -61,6 +72,7 @@ class ViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button1.translatesAutoresizingMaskIntoConstraints = false
+        button2.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -75,13 +87,22 @@ class ViewController: UIViewController {
             
             button1.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button1.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20),
-            button1.widthAnchor.constraint(equalToConstant: view.frame.width)
+            button1.widthAnchor.constraint(equalToConstant: view.frame.width),
+            
+            button2.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button2.topAnchor.constraint(equalTo: button1.bottomAnchor, constant: 20),
+            button2.widthAnchor.constraint(equalToConstant: view.frame.width)
         ])
     }
 }
 
 private extension ViewController {
     @objc func tap() {
+        navigationController?.pushViewController(NewViewController(), animated: true)
+    }
+}
+private extension ViewController {
+    @objc func tap2() {
         navigationController?.pushViewController(NewViewController(), animated: true)
     }
 }
