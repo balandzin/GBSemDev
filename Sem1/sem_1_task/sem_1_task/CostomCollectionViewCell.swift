@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CostomCollectionViewCell: UICollectionViewCell {
+final class CostomCollectionViewCell: UICollectionViewCell {
     var tap: ((UIImage) -> Void)?
     private var imageView = UIImageView(image: UIImage (systemName: "person" ))
     
