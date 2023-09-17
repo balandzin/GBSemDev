@@ -17,6 +17,7 @@
 		D319AAE82AB5FEC000752698 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D319AAE72AB5FEC000752698 /* CustomTableViewCell.swift */; };
 		D319AAEA2AB606C700752698 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D319AAE92AB606C700752698 /* CollectionViewController.swift */; };
 		D319AAEC2AB6078A00752698 /* CostomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D319AAEB2AB6078A00752698 /* CostomCollectionViewCell.swift */; };
+		D319AAEE2AB7573A00752698 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D319AAED2AB7573A00752698 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		D319AAE72AB5FEC000752698 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		D319AAE92AB606C700752698 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		D319AAEB2AB6078A00752698 /* CostomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostomCollectionViewCell.swift; sourceTree = "<group>"; };
+		D319AAED2AB7573A00752698 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				D319AAE72AB5FEC000752698 /* CustomTableViewCell.swift */,
 				D319AAE92AB606C700752698 /* CollectionViewController.swift */,
 				D319AAEB2AB6078A00752698 /* CostomCollectionViewCell.swift */,
+				D319AAED2AB7573A00752698 /* ImageViewController.swift */,
 				D319AAB62AB37D1500752698 /* Assets.xcassets */,
 				D319AAB82AB37D1500752698 /* LaunchScreen.storyboard */,
 				D319AABB2AB37D1500752698 /* Info.plist */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D319AAE82AB5FEC000752698 /* CustomTableViewCell.swift in Sources */,
+				D319AAEE2AB7573A00752698 /* ImageViewController.swift in Sources */,
 				D319AAE62AB5FBEC00752698 /* TableTableViewController.swift in Sources */,
 				D319AAB22AB37D1400752698 /* ViewController.swift in Sources */,
 				D319AAAE2AB37D1400752698 /* AppDelegate.swift in Sources */,
